@@ -1,0 +1,617 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --red-color: #f44336;
+}
+
+body{
+    background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("./images/university.jpg");
+    background-size: contain;
+    object-fit: contain; 
+    overflow-x: hidden;
+}
+
+/* -------   Essentials   ------ */
+
+h1{
+    font-size: 4.5rem;
+    text-align: center;
+    margin: 2rem;
+    color: #fff;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 1rem;
+    text-align: center;
+}
+
+h4{
+    font-size: 1.3rem;
+    color: black;
+    margin: 1rem;
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+    color: #fff;
+    margin: .5rem 1rem;
+    text-align: center;
+}
+
+
+/* INTRO [ANIMATIONS]*/
+
+.intro{
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    /* transform: translateY(100%); */
+}
+
+.intro-text h1{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+/* HIDE [h1 or text] */
+
+.hide{
+    overflow: hidden;
+}
+
+.hide span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+/* SLIDER [ANIMATIONS] */
+
+.slider{
+    background: #2a2e33;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+}
+
+/* ----   MAIN SECTION   --- */
+
+main{
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+
+/* ----   NAVBAR SECTION  ---- */
+
+.showMenu{
+    position: absolute;
+    top: -1%;
+    right: 5%;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}    
+
+.navbar{
+    display: flex;
+    padding: 0rem 4rem; 
+    justify-content: space-between;
+}    
+
+.uni-logo{
+   font-size: 1.5rem;
+   color: #fff;
+   cursor: pointer;
+   user-select: none;
+   font-weight: 900;
+   letter-spacing: 1px;
+}        
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}    
+
+.nav-links ul{
+    list-style: none;
+}    
+
+.nav-links ul li{
+    display: inline-block;
+    margin: 0 .7rem;
+}    
+
+.nav-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.5s;
+    margin: auto;
+    letter-spacing: 1px;
+}     
+
+
+/*  ------NAV - LINKS UNDERLINE HOVER EFFEcT----- */
+
+.nav-links li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    background: var(--red-color);
+    margin: auto;
+    transition: 0.5s;
+}    
+
+.nav-links li a:hover::after{
+    width: 100%;
+}    
+
+/* ----  SECTION [COURSE]   ---- */
+.course{
+    background: #fff;
+    padding: 8rem 0 1rem 0; 
+}
+
+.content{
+    padding: 3.5rem;  
+}
+
+main p{
+    width: 60%;
+    margin: auto;
+    color: #fff;
+}
+
+.btn{
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: .6rem 2rem;
+    border-radius: .3rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 1.3rem;
+}
+
+.btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+section .courses{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.course-details{
+    flex-basis: 30%;
+    background: #fff1f4;
+    border-radius: 2rem;
+    margin: 3rem 0;
+    transition: 0.5s;
+}
+
+.course-details:hover{
+    box-shadow:  0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.heading h2,p{
+    color: black;
+}
+
+.course-details p,h3{
+    margin: 3rem;
+    color: black;
+}
+
+/* ---  SECTION [CAMPUS]    --- */
+
+.campus{
+    background: #fff;
+    padding: 5rem 0 3rem 0;
+}
+
+.all-campus{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.campus-details{
+    flex-basis: 31%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.campus-details img{
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+    transition: 1s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/* ----    SECTION  FACILITIES    ---- */
+.facilities{
+    background: #fff;
+    padding: 2rem 0;
+    padding-top: 7rem;
+}
+
+.all-facilities{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+    margin-top: 3rem;
+}
+
+.facility{
+    flex-basis: 31%;
+}
+
+.facility img{
+    width: 80%;
+    border-radius: 2rem;
+}
+
+/* SECTION TESTIMONIALS */
+
+.testimonials{
+    background: #fff;
+}
+
+.all-rating{
+    display: flex;
+    justify-content: center;
+}
+
+.rating{
+    flex-basis: 44%;
+    background: #fff1f4;
+    padding: 25px;
+    margin: 1rem;
+}
+
+.rating img{
+    width: 10%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.rating p{
+    width: 80%;
+    display: inline-block;
+    font-size: 12px;
+    text-align: left;
+}
+
+.rating h4{
+    text-align: right;
+    margin: 0 2rem;
+}
+
+/* SECTION [CALL-TO-ACTION] */
+
+.call-to-action{
+    background: #fff;
+    padding: 5rem 0;
+}
+
+
+
+.items{
+    background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('./images/banner2.jpg');
+    background-size: cover;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.items h3{
+    color: #fff;
+    width: 60%;
+}
+
+
+/* FOOTER */
+
+footer{
+    background: #fff;
+    padding: 5rem;
+    padding-bottom: 1rem;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading p{
+    width: 70%;
+    margin: 1rem;
+}
+
+.footer{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+@media(max-width: 676px){
+    
+    /* Essentials */
+
+    h1{
+        font-size: 2rem;
+        margin: 2rem;
+    }
+
+    h2{
+        font-size: 1.7rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    p
+     {
+        font-size: .8rem;
+     } 
+
+   /* NAVBAR */
+    
+    .navbar{
+        padding: 0rem 2rem; 
+        margin: 0;
+    }
+    
+    .nav-links ul li{
+        display: block;
+    }
+    
+    .nav-links{
+        top: 0;
+        left: -60%;
+        height: 105%;
+        background:#f44336;
+        width: 60%;
+        position: absolute;
+        z-index: 2;
+        text-align: left;
+        padding: 1rem;
+        transition: .5s linear;
+        transform: translateY(-5%);
+        overflow: hidden;
+    }
+
+    .show-navbar{
+        left: 0;
+    }
+    
+    nav .fa{
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        float: right;
+        transition: .5s;
+    }
+    
+    nav .fa:hover{
+        transform: rotate(360deg);
+    }
+    
+    .nav-links ul{
+        margin-top: .7rem;
+        padding: 2rem 1rem;
+    }
+    
+    .nav-links ul li a{
+        line-height: 2rem;
+        font-size: 20px;
+    }
+
+    .nav-links li a::after{
+        background: #fff;
+    }  
+    /* MAIN SECTION */
+    
+    
+    
+    main p{
+        width: 100%;
+        margin: .7rem 0;
+    }
+    
+    
+    /* SECTION [COURSE] */
+    
+    section .courses{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+    
+    .course-details{
+        margin: 1rem 1rem;
+        padding: 2rem 0;
+    }
+    
+    
+    /* SECTION [CAMPUS] */
+    
+    .all-campus{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .campus-details{
+        width: 70%;
+        margin: 2rem;
+    }
+    
+    .campus-details img{
+        opacity: .7;
+    }
+    
+    .layer h3{
+        bottom: 49%;
+        opacity: 1;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* ----  SECTION FACILITIES   ---- */
+
+    .all-facilities{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .facility{
+        margin: 2rem 0;
+    }
+
+    .facility img{
+        width: 70%;
+        margin: 2rem 0;
+    }
+
+
+    /* SECTION [TESTIMONIALS] */
+
+    .rating{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rating img{
+        width: 40%;
+    }
+
+    .rating p{
+        text-align: center;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .rating h4{
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+
+    /* SECTION [CALL-TO-ACTION] */
+
+    .items{
+        border-radius: 1rem;
+    }
+
+    .items h3{
+        width: 95%;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding: 5rem 3rem;
+        padding-bottom: 1rem;
+    }
+
+    .heading p{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 677px) {
+    .showMenu{
+        display: none;
+    }
+
+    #hideMenu{
+        display: none;
+    }
+  }
+  
