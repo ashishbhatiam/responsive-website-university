@@ -1,6 +1,6 @@
 # Responsive Website University
 
-### You can see a live demo [here](https://ab-university.netlify.app).
+### You can see a live demo [here](https://university.ashishbhatia.dev/).
 ### Responsive Website University
 Nice design of a responsive university website :school:. It contains a header, home, about, course, menu, blog, contact and a footer. Along with GSAP Animation. 
 <br><br><div style="text-align:center;">
